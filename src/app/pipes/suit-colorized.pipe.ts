@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'SuitColorized',
+  name: 'suitColorized',
 })
 export class SuitColorizedPipe implements PipeTransform {
   transform(suit: string): unknown {
