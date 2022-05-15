@@ -22,17 +22,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'web'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it('should render title correctly in the morning', () => {
+      const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('web');
+    Date.prototype.getHours = () => 15
+    expect(app.title).toEqual('Good evening');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('web app is running!');
+  it('should render title correctly in the evening', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    Date.prototype.getHours = () => 9
+    expect(app.title).toEqual('Good morning');
   });
 
 });
