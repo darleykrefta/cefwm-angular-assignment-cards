@@ -1,0 +1,44 @@
+.card {
+  height: 390px;
+  width: 250px;
+  border: 2px solid gainsboro;
+  display: flex;
+  padding: 16px;
+  margin: 8px;
+}
+
+.number {
+  font-size: 2.5rem;
+}
+
+.suit {
+  font-size: 2.5rem;
+}
+
+.red-suit {
+  color: red;
+}
+
+.black-suit {
+  color: black;
+}
+
+.display-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-middle {
+  display: flex;
+  justify-content: center;
+}
+
+.display-middle .suit {
+  font-size: 5rem;
+}
+
+.display-bottom {
+  display: flex;
+  flex-direction: column;
+  transform: rotate(180deg);
+}
